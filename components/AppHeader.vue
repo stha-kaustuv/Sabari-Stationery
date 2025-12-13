@@ -13,17 +13,23 @@ import Sabari from "../assets/img/Sabari1.png";
         <NuxtLink to="/" class="text-gray-700 hover:text-black font-medium"
           >Home</NuxtLink
         >
-        <NuxtLink to="/" class="text-gray-700 hover:text-black font-medium"
+        <NuxtLink to="/about" class="text-gray-700 hover:text-black font-medium"
           >About</NuxtLink
         >
 
-        <NuxtLink to="/" class="text-gray-700 hover:text-black font-medium"
+        <NuxtLink
+          to="/products"
+          class="text-gray-700 hover:text-black font-medium"
           >Products</NuxtLink
         >
-        <NuxtLink to="/" class="text-gray-700 hover:text-black font-medium"
+        <NuxtLink
+          to="/gallery"
+          class="text-gray-700 hover:text-black font-medium"
           >Gallery</NuxtLink
         >
-        <NuxtLink to="/" class="text-gray-700 hover:text-black font-medium"
+        <NuxtLink
+          to="/contact"
+          class="text-gray-700 hover:text-black font-medium"
           >Contact</NuxtLink
         >
         <button
