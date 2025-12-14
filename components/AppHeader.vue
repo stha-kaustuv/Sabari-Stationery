@@ -3,9 +3,11 @@ import Sabari from "../assets/img/Sabari1.png";
 </script>
 
 <template>
-  <header class="w-full bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4">
+  <header class="w-full bg-white shadow-black sticky top-0 z-50">
+    <div class=" flex items-center justify-between py-2 px-4">
+      <div class="ml-[130px]">
       <img :src="Sabari" alt="Sabari Logo" class="h-24" />
+      </div>
 
       <nav class="flex items-center gap-12">
         <NuxtLink

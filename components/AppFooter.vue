@@ -6,10 +6,10 @@ import whatsapp from "../assets/img/whatsapp.png";
 import instagram from "../assets/img/instagram.jpeg";
 </script>
 <template>
-  <div class="w-full bg-black p-2">
-    <div class="max-w-7xl mx-auto py-2">
+  <div class="w-full bg-black p-4">
+    <div class="max-w-7xl mx-auto py-2 shadow-md">
       <div class="text-gray-300 flex justify-between items-center">
-        <div>
+        <div class="">
           <img :src="blackSabari" class="h-14" />
         </div>
         <div class="flex gap-5">
