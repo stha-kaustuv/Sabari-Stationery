@@ -9,12 +9,14 @@ onMounted(() => {
 
 <template>
   <div class="flex flex-col min-h-screen">
+    <!-- <div class="max-w-7xl mx-auto py-2 shadow-md"> -->
       <AppHeaderVue />
-        <slot />
-        <AppFooterVue />
+      <slot />
+      <AppFooterVue />
+    <!-- </div> -->
 
-      <!-- SVG positioned relative to this box -->
-      <!-- <div
+    <!-- SVG positioned relative to this box -->
+    <!-- <div
         class="absolute -bottom-14 -right-14 w-30 h-30 text-white pointer-events-none"
       >
         <svg viewBox="0 0 100 100" fill="currentColor">
@@ -28,7 +30,7 @@ onMounted(() => {
           />
         </svg>
       </div> -->
-      <!-- <div
+    <!-- <div
         class="star absolute -bottom-12 -right-12 w-30 h-30 text-white pointer-events-none"
       ></div> -->
   </div>
