@@ -1,7 +1,50 @@
 <script setup>
 import sketch from "../assets/img/notebooks/sketch2.jpg";
+import copy2 from "../assets/img/notebooks/Copy2.jpg";
+import notebook from "../assets/img/notebooks/Notebook.jpg";
+import personalized from "../assets/img/notebooks/PersonalisedCopy.png";
+import sketch2 from "../assets/img/notebooks/Sketch.jpg";
 import copy from "../assets/img/notebooks/Copies.jpg";
+import Card from "~/components/Card.vue";
+import AnimatedSlider from "~/components/AnimatedSlider.vue";
 
+const products = [
+  {
+    id: 1,
+    image: personalized,
+    name: "Personalized",
+  },
+  {
+    id: 2,
+    image: copy2,
+    name: "Copy",
+  },
+  {
+    id: 3,
+    image: notebook,
+    name: "Notebook",
+  },
+  {
+    id: 4,
+    image: copy,
+    name: "Drawing Copy",
+  },
+  {
+    id: 7,
+    image: personalized,
+    name: "Personalized",
+  },
+  {
+    id: 5,
+    image: sketch,
+    name: "Sketch",
+  },
+  {
+    id: 6,
+    image: sketch2,
+    name: "Notebook",
+  },
+];
 </script>
 <template>
   <div class="min-h-[100vh] max-w-[1280px] w-[1280px] shadow-md mx-auto px-8">
@@ -40,9 +83,9 @@ import copy from "../assets/img/notebooks/Copies.jpg";
           expectations of students, teachers, and institutions.
         </p>
         <p class="mt-2 text-gray-700">
-          Our copies are designed for daily classroom and official use, offering strong
-          binding, smooth paper, and clean layouts that support better learning
-          experiences.
+          Our copies are designed for daily classroom and official use, offering
+          strong binding, smooth paper, and clean layouts that support better
+          learning experiences.
         </p>
       </div>
       <!-- abnout image section -->
@@ -50,5 +93,61 @@ import copy from "../assets/img/notebooks/Copies.jpg";
         <img :src="sketch" class="h-[350px]" />
       </div>
     </div>
+
+    <div class="w-full bg-blue-900 p-[1px]"></div>
+
+    <!-- Product Section -->
+    <div class="py-6">
+      <p class="text-3xl text-gray-700 font-bold">Products</p>
+      <div class="flex gap-[70px]">
+        <div
+          v-for="(product, index) in products.slice(0, 4)"
+          class="pt-6"
+          :key="index"
+        >
+          <Card :id="product.id" :image="product.image" />
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-blue-900 p-[1px] my-2"></div>
+
+    <div class="py-8 bg-custom-gradient">
+      <div
+        class="container mx-auto flex flex-col items-center space-y-4 text-center"
+      >
+        <h1
+          class="text-center font-semibold italic font-roboto text-2xl md:text-[40px]"
+        >
+          Gallery
+        </h1>
+        <p class="text-gray-500 text-sm md:text-[18px] max-w-[786px]">
+          At Sabari Stationery Udhyog, we showcase the quality and craftsmanship
+          of our notebooks, copies, and stationery. Explore our gallery to see
+          durable, beautifully finished products made for schools and
+          institutions.
+        </p>
+      </div>
+      <!-- Slider -->
+      <div
+        class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-4 relative pt-[34px]"
+      >
+        <AnimatedSlider :products="products" />
+        <!--------------------------- two sides gradients ---------------------------->
+        <!-- <div class="bg-ourPicksGradients-g1 opacity-75   w-[192px] h-[339px] z-40 absolute top-[93px]"></div>
+        <div class="bg-ourPicksGradients-g1 opacity-75   w-[192px] h-[339px] z-40 absolute top-[93px] right-[80px]"></div> -->
+      </div>
+    </div>
   </div>
 </template>
+
+<style>
+.bg-custom-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.8),
+    /* Slightly white at the left */ rgba(209, 231, 255, 255),
+    /* More white at the middle */ rgba(255, 255, 255, 0.8)
+      /* Slightly white at the right */
+  );
+}
+</style>

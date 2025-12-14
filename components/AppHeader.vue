@@ -1,12 +1,14 @@
 <script setup>
 import Sabari from "../assets/img/Sabari1.png";
+import Sabari2 from "../assets/img/Sabari2.png";
+
 </script>
 
 <template>
   <header class="w-full bg-white shadow-black sticky top-0 z-50">
-    <div class=" flex items-center justify-between py-2 px-4">
+    <div class=" flex items-center justify-between py-2 px-12">
       <div class="ml-[130px]">
-      <img :src="Sabari" alt="Sabari Logo" class="h-24" />
+      <img :src="Sabari2" alt="Sabari Logo" class="h-26" />
       </div>
 
       <nav class="flex items-center gap-12">

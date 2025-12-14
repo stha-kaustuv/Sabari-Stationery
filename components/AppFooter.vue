@@ -1,5 +1,6 @@
 <script setup>
 import blackSabari from "../assets/img/blackSabari.png";
+import blackSabari2 from "../assets/img/blackSabari2.png";
 import facebook from "../assets/img/facebook.png";
 import viber from "../assets/img/viber.png";
 import whatsapp from "../assets/img/whatsapp.png";
@@ -10,7 +11,7 @@ import instagram from "../assets/img/instagram.jpeg";
     <div class="max-w-7xl mx-auto py-2 shadow-md">
       <div class="text-gray-300 flex justify-between items-center">
         <div class="">
-          <img :src="blackSabari" class="h-14" />
+          <img :src="blackSabari2" class="h-24" />
         </div>
         <div class="flex gap-5">
           <a
