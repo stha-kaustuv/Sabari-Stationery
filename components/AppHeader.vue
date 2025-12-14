@@ -3,35 +3,51 @@ import Sabari from "../assets/img/Sabari1.png";
 </script>
 
 <template>
-  <header class="w-full bg-white shadow-md">
+  <header class="w-full bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4">
-      <div class="">
-        <img :src="Sabari" alt="Sabari Logo" class="h-24" />
-      </div>
+      <img :src="Sabari" alt="Sabari Logo" class="h-24" />
 
       <nav class="flex items-center gap-12">
-        <NuxtLink to="/" class="text-gray-700 hover:text-black font-medium"
-          >Home</NuxtLink
+        <NuxtLink
+          to="/"
+          exact-active-class="text-black border-b-2 border-black"
+          class="text-gray-700 hover:text-black font-medium pb-1"
         >
-        <NuxtLink to="/about" class="text-gray-700 hover:text-black font-medium"
-          >About</NuxtLink
+          Home
+        </NuxtLink>
+
+        <NuxtLink
+          to="/about"
+          active-class="text-black border-b-2 border-black"
+          class="text-gray-700 hover:text-black font-medium pb-1"
         >
+          About
+        </NuxtLink>
 
         <NuxtLink
           to="/products"
-          class="text-gray-700 hover:text-black font-medium"
-          >Products</NuxtLink
+          active-class="text-black border-b-2 border-black"
+          class="text-gray-700 hover:text-black font-medium pb-1"
         >
+          Products
+        </NuxtLink>
+
         <NuxtLink
           to="/gallery"
-          class="text-gray-700 hover:text-black font-medium"
-          >Gallery</NuxtLink
+          active-class="text-black border-b-2 border-black"
+          class="text-gray-700 hover:text-black font-medium pb-1"
         >
+          Gallery
+        </NuxtLink>
+
         <NuxtLink
           to="/contact"
-          class="text-gray-700 hover:text-black font-medium"
-          >Contact</NuxtLink
+          active-class="text-black border-b-2 border-black"
+          class="text-gray-700 hover:text-black font-medium pb-1"
         >
+          Contact
+        </NuxtLink>
+
         <button
           class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
         >
@@ -41,12 +57,3 @@ import Sabari from "../assets/img/Sabari1.png";
     </div>
   </header>
 </template>
-
-<style scoped>
-/* Optional: add sticky header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-</style>

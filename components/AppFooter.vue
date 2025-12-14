@@ -1,5 +1,9 @@
 <script setup>
 import blackSabari from "../assets/img/blackSabari.png";
+import facebook from "../assets/img/facebook.png";
+import viber from "../assets/img/viber.png";
+import whatsapp from "../assets/img/whatsapp.png";
+import instagram from "../assets/img/instagram.jpeg";
 </script>
 <template>
   <div class="w-full bg-black p-2">
@@ -9,15 +13,38 @@ import blackSabari from "../assets/img/blackSabari.png";
           <img :src="blackSabari" class="h-14" />
         </div>
         <div class="flex gap-5">
-          <p>Facebook</p>
-          <p>Instagram</p>
-          <p>Whatsapp</p>
-          <p>Whatsapp</p>
-          <p>Whatsapp</p>
+          <a
+            href="https://www.facebook.com/addwet.shrestha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img :src="facebook" class="h-8"
+          /></a>
+          <a
+            href="https://wa.me/9779841647263"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img :src="whatsapp" class="h-8" />
+          </a>
+          <a
+            href="https://www.instagram.com/addwetkrishna/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img :src="instagram" class="h-8" />
+          </a>
+
+          <a
+            href="viber://chat?number=9779841647263"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img :src="viber" class="h-8" />
+          </a>
         </div>
       </div>
       <div
-        class="flex mt-2 gap-[700px] text-gray-300 items-center cursor-pointer"
+        class="flex mt-2 gap-[670px] text-gray-300 items-center cursor-pointer"
       >
         <div>
           <p>Kumarigal, chabahil</p>
