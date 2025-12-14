@@ -7,44 +7,44 @@ import sketch2 from "../assets/img/notebooks/Sketch.jpg";
 import copy from "../assets/img/notebooks/Copies.jpg";
 import Card from "~/components/Card.vue";
 import AnimatedSlider from "~/components/AnimatedSlider.vue";
+import { useSeoMeta } from "nuxt/app";
 
-const products = [
-  {
-    id: 1,
-    image: personalized,
-    name: "Personalized",
-  },
-  {
-    id: 2,
-    image: copy2,
-    name: "Copy",
-  },
-  {
-    id: 3,
-    image: notebook,
-    name: "Notebook",
-  },
-  {
-    id: 4,
-    image: copy,
-    name: "Drawing Copy",
-  },
-  {
-    id: 7,
-    image: personalized,
-    name: "Personalized",
-  },
-  {
-    id: 5,
-    image: sketch,
-    name: "Sketch",
-  },
-  {
-    id: 6,
-    image: sketch2,
-    name: "Notebook",
-  },
+useSeoMeta({
+  title: "Sabari Stationery Udhyog | Quality Notebooks and School Supplies",
+  description:
+    "Discover Sabari Stationery Udhyog, your trusted source for high-quality notebooks, copies, and stationery items. Perfect for schools and institutions, crafted with durability and precision.",
+  keywords:
+    "Sabari Stationery Udhyog, notebooks, school supplies, copies, stationery, quality stationery, durable notebooks, educational supplies, school stationery",
+  ogTitle: "Sabari Stationery Udhyog | Quality Notebooks and School Supplies",
+  ogDescription:
+    "Browse Sabari Stationery Udhyog’s collection of premium notebooks, copies, and other stationery items made for schools and institutions. High-quality and durable products for all your writing needs.",
+  // ogImage: image, // Add a relevant image path for the homepage
+  // ogUrl: "https://sabari-stationery.com/", // Your website URL
+  // twitterCard: image, // Optional: Twitter card image
+});
+
+// Original 7 items
+const baseProducts = [
+  { id: 1, image: personalized, name: "Personalized" },
+  { id: 2, image: copy2, name: "Copy" },
+  { id: 3, image: notebook, name: "Notebook" },
+  { id: 4, image: copy, name: "Drawing Copy" },
+  { id: 7, image: personalized, name: "Personalized" },
+  { id: 5, image: sketch, name: "Sketch" },
+  { id: 6, image: sketch2, name: "Notebook" },
 ];
+
+// Duplicate the array (e.g., twice)
+const allProducts = [...baseProducts, ...baseProducts];
+
+// Or if you want to repeat multiple times
+const repeatTimes = 3;
+const allProductsRepeated = Array.from(
+  { length: repeatTimes },
+  () => baseProducts
+).flat();
+
+console.log(allProductsRepeated);
 </script>
 <template>
   <div class="min-h-[100vh] max-w-[1280px] w-[1280px] shadow-md mx-auto px-8">
@@ -101,7 +101,7 @@ const products = [
       <p class="text-3xl text-gray-700 font-bold">Products</p>
       <div class="flex gap-[70px]">
         <div
-          v-for="(product, index) in products.slice(0, 4)"
+          v-for="(product, index) in allProductsRepeated.slice(0, 4)"
           class="pt-6"
           :key="index"
         >
@@ -131,7 +131,7 @@ const products = [
       <div
         class="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-4 relative pt-[34px]"
       >
-        <AnimatedSlider :products="products" />
+        <AnimatedSlider :products="allProductsRepeated" />
         <!--------------------------- two sides gradients ---------------------------->
         <!-- <div class="bg-ourPicksGradients-g1 opacity-75   w-[192px] h-[339px] z-40 absolute top-[93px]"></div>
         <div class="bg-ourPicksGradients-g1 opacity-75   w-[192px] h-[339px] z-40 absolute top-[93px] right-[80px]"></div> -->
