@@ -9,7 +9,7 @@ import instagram from "../assets/img/instagram.jpeg";
 <template>
   <div class="w-full bg-black p-4">
     <div class="max-w-7xl mx-auto py-2 shadow-md">
-      <div class="text-gray-300 flex justify-between items-center">
+      <div class="text-gray-300 flex justify-between items-center border-b border-gray-800 mb-4">
         <div class="">
           <img :src="blackSabari2" class="h-24" />
         </div>
