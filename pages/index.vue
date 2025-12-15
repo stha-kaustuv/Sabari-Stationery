@@ -34,6 +34,13 @@ const baseProducts = [
   { id: 6, image: sketch2, name: "Notebook" },
 ];
 
+const institute = [
+  { name: "Riviera International Academy" },
+  { name: "Akash Ganga English Medium School" },
+  { name: "Boudha International Academy" },
+  { name: "Sharadha Academy" },
+];
+
 // Duplicate the array (e.g., twice)
 const allProducts = [...baseProducts, ...baseProducts];
 
@@ -111,6 +118,7 @@ console.log(allProductsRepeated);
     </div>
     <div class="w-full bg-blue-900 p-[1px] my-2"></div>
 
+    <!-- Gallery Section -->
     <div class="py-8 bg-custom-gradient">
       <div
         class="container mx-auto flex flex-col items-center space-y-4 text-center"
@@ -137,6 +145,43 @@ console.log(allProductsRepeated);
         <div class="bg-ourPicksGradients-g1 opacity-75   w-[192px] h-[339px] z-40 absolute top-[93px] right-[80px]"></div> -->
       </div>
     </div>
+
+    <!-- Quote Section -->
+    <div class="px-8 py-18">
+      <p class="text-5xl font-bold text-center">
+        Looking for bulk notebooks or
+      </p>
+      <p class="text-5xl font-bold text-center mt-3">
+        customized school copies?
+      </p>
+      <p class="text-2xl text-center text-gray-700 mt-5">
+        Get a quote today and let us handle the rest
+      </p>
+      <div class="w-full mt-8 flex justify-center">
+        <NuxtLink to="/quote">
+          <button
+            class="bg-blue-900 text-white py-4 text-2xl px-8 rounded-sm cursor-pointer"
+          >
+            Get a Quote
+          </button>
+        </NuxtLink>
+      </div>
+      <div class="py-12">
+        <h3 class="text-5xl font-bold text-center mt-8">
+          Trusted by Schools & Institutions
+        </h3>
+        <div class="flex gap-8 mt-8">
+          <div v-for="(school, index) in institute" :key="index">
+            <Card
+              :show-button="false"
+              :show-image="false"
+              :show-school="true"
+              :school="school.name"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -145,9 +190,8 @@ console.log(allProductsRepeated);
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.8),
-    /* Slightly white at the left */ rgba(209, 231, 255, 255),
-    /* More white at the middle */ rgba(255, 255, 255, 0.8)
-      /* Slightly white at the right */
+    rgba(209, 231, 255, 255),
+    rgba(255, 255, 255, 0.8)
   );
 }
 </style>
